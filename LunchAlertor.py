@@ -10,9 +10,9 @@ import tkinter  as tk
 
 parser = argparse.ArgumentParser()
 parser.add_argument("startHour", type=str,
-                    help="the start hour of the range we want to monitor. Example: 12:00")
+                    help="the start hour of the range we want to monitor. Example: 12")
 parser.add_argument("endHour", type=str,
-                    help="the end hour of the range we want to monitor. Example: 14:00")
+                    help="the end hour of the range we want to monitor. Example: 14")
 args = parser.parse_args()
 startHour = args.startHour
 endHour = args.endHour
@@ -29,8 +29,8 @@ appointments = calendar.Items
 
 start = datetime.date.today()
 # format can change in other regions
-startStr = start.strftime("%Y-%d-%m {0}".format(startHour))
-endStr = start.strftime("%Y-%d-%m {0}".format(endHour))
+startStr = start.strftime("%Y-%d-%m {0}:00".format(startHour))
+endStr = start.strftime("%Y-%d-%m {0}:00".format(endHour))
 appointments.Sort("[Start]")
 appointments.IncludeRecurrences = "True"
 
