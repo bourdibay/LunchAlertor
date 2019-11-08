@@ -8,4 +8,7 @@ This script is supposed to be called in the task scheduler around 11h, to remind
 
 # Usage
 To get alert of meetings starting between 12h00 and 15h00:
-`python3 LunchAlertor.py 12:00 15:00`
+`python3 LunchAlertor.py 12 15`
+This script must *NOT* be run as admin.
+
+The script setup.cmd (to run in admin mode) creates a new task in the Task Scheduler to run the script at noon and at workstation unlock.
