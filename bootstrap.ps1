@@ -14,6 +14,6 @@ if ($currentDate -gt $endDate -or $currentDate -lt $startDate)
    Break
 }
 
-$pythonPath="D:\Program Files\Python\Python37\python.exe" # todo: PYTHONPATH ?
+$pythonPath="py" # todo: PYTHONPATH ?
 
 & $pythonPath "LunchAlertor.py" $startHour $endHour
